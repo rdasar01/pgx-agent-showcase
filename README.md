@@ -14,7 +14,7 @@ The system cross-references patient genomic variants with biomedical evidence, d
 
 PGx-Agent is being designed as a Python-based API and will be deployed and evaluated in Google Cloud using relevant public biomedical datasets.
 
-This repository is a public project showcase. It contains selected documentation, diagrams, synthetic examples, and non-proprietary demonstrations. The complete implementation and proprietary system components are maintained separately.
+This repository is a public portfolio showcase containing project documentation, a high-level architecture diagram, a synthetic patient profile, and an illustrative structured output. The complete implementation and proprietary system components are maintained separately.
 
 ## Business Problem
 
@@ -159,74 +159,86 @@ Evaluation examples in this repository will use synthetic or appropriately publi
 
 ## Public Repository Scope
 
-This repository may include:
+This repository is a public portfolio showcase for PGx-Agent. It presents the project’s intended purpose, proposed architecture, governance approach, and evaluation strategy without exposing the proprietary implementation.
 
-* High-level architecture documentation
-* System and data-flow diagrams
-* Synthetic patient profiles
-* Sanitized sample outputs
-* Evaluation methodology
-* Selected aggregate performance results
-* Screenshots or demonstration recordings
-* Non-proprietary example code
-* Engineering design decisions and tradeoffs
+The repository includes:
 
-This repository does not include:
+* A project overview and technical design summary
+* A high-level architecture diagram
+* A synthetic patient profile
+* A representative structured output example
+* Medical, safety, and intellectual-property disclaimers
 
+The repository does not include:
+
+* Production source code
 * Proprietary orchestration logic
-* Production prompts
-* Internal ranking algorithms
+* Agent prompts or routing instructions
+* Retrieval and ranking implementations
+* Production API integrations
+* Cloud deployment configuration
+* Credentials, secrets, or access tokens
 * Private evaluation datasets
-* Production cloud configuration
-* Credentials or secrets
-* Restricted biomedical data
 * Protected health information
 * Internal commercial strategy or product roadmaps
 
-## Example Repository Structure
+## Repository Structure
 
 ```text
 pgx-agent-showcase/
 ├── README.md
 ├── NOTICE.md
-├── docs/
-│   ├── architecture.md
-│   ├── governance.md
-│   └── evaluation-methodology.md
-├── diagrams/
-├── screenshots/
-├── examples/
-│   ├── synthetic-patient.json
-│   └── sample-output.json
-└── demo/
-    └── non-proprietary-example.py
+├── architecture.png
+├── synthetic-patient.json
+└── sample-output.json
 ```
+
+### File Descriptions
+
+* **`README.md`** — Describes the project, business problem, proposed architecture, governance approach, evaluation plan, limitations, and intended use.
+* **`NOTICE.md`** — Contains copyright, ownership, and permitted-use information.
+* **`architecture.png`** — Provides a high-level visual representation of the proposed system architecture.
+* **`synthetic-patient.json`** — Contains a fictional patient profile created solely for demonstration.
+* **`sample-output.json`** — Shows an illustrative example of the system’s proposed structured output.
 
 ## Security and Data Handling
 
-Do not submit protected health information, personally identifiable information, credentials, confidential records, or production clinical data to demonstration versions of this project.
+This public repository does not contain production services, credentials, restricted datasets, or clinical records.
 
-All public examples should use synthetic, de-identified, or independently public information.
+The example files must contain only synthetic or independently public information. Do not include:
 
-Secrets must be stored through an approved secret-management system and must never be committed to the repository.
+* Protected health information
+* Personally identifiable information
+* Real patient records
+* API keys or authentication tokens
+* Cloud credentials
+* Private endpoints
+* Confidential organizational data
+* Licensed data that cannot be redistributed
+
+The `synthetic-patient.json` file must represent a fictional individual and must not be derived from an identifiable patient record.
+
+The `sample-output.json` file is illustrative and must not be interpreted as a validated clinical recommendation.
+
+Security, privacy, access control, audit logging, secret management, and regulatory requirements for the complete implementation are outside the scope of this public showcase repository.
 
 ## Limitations
 
-PGx-Agent is an experimental software project. Its outputs may be incomplete, inaccurate, outdated, or inappropriate for a specific patient or clinical context.
+This repository documents a proposed and developing system. It does not contain the complete PGx-Agent implementation and cannot independently execute pharmacogenomic analysis, retrieve active clinical trials, or generate patient-specific recommendations.
 
-Limitations may include:
+The architecture, workflows, and sample outputs represent the intended system design and may change as development and evaluation continue.
 
-* Incomplete or inconsistent source data
-* Changes in trial recruitment status
-* Ambiguous eligibility criteria
-* Incomplete genotype-to-phenotype interpretation
-* Insufficient evidence for uncommon variants
-* Model-generated errors
-* Retrieval failures
-* Incorrect confidence estimates
-* Missing contraindications or interactions
+The included examples have several limitations:
 
-The presence or ranking of a trial does not establish eligibility, appropriateness, efficacy, or safety.
+* The patient profile is synthetic.
+* The sample output is illustrative rather than clinically validated.
+* Trial availability and recruitment status may change over time.
+* Biomedical evidence may be incomplete, conflicting, or updated after the examples are created.
+* The examples do not establish clinical eligibility, treatment suitability, efficacy, or safety.
+* Performance claims should not be inferred unless supported by documented evaluation results.
+* The public repository does not demonstrate the complete proprietary retrieval, ranking, orchestration, or safety-validation process.
+
+PGx-Agent remains an experimental decision-support project. Its outputs must not be used as a substitute for qualified clinical judgment, validated pharmacogenomic interpretation, or review of authoritative biomedical sources.
 
 ## Medical Disclaimer
 
