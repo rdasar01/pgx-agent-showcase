@@ -2,7 +2,7 @@
 
 > A governed multi-agent clinical decision-support copilot for pharmacogenomic analysis, clinical-trial matching, and drug-safety review.
 
-> **Project status:** In development
+> **Project status:** MVP in development
 > **Intended use:** Technical demonstration and portfolio project
 > **Clinical status:** Not validated or approved for clinical use
 
