@@ -1,0 +1,248 @@
+{
+  "sample_metadata": {
+    "artifact_type": "illustrative_expected_output",
+    "implementation_status": "pre-implementation",
+    "public_mvp_schema_version": "0.1",
+    "synthetic_data_only": true,
+    "clinical_use": "NOT_FOR_CLINICAL_USE",
+    "note": "Illustrative sample only. Trial matches, scores, interpretations, and citations are placeholders and must be replaced by runtime results from implemented retrieval, scoring, validation, and qualified human review."
+  },
+  "agent_recommendation_run": {
+    "run_id": 9001,
+    "run_status": "AWAITING_HUMAN_REVIEW",
+    "patient_id": 98421,
+    "execution_timestamp": "2026-08-07T00:00:00-07:00",
+    "completed_timestamp": "2026-08-07T00:00:12-07:00",
+    "model_name": "Gemini",
+    "model_version": "TBD_AT_RUNTIME",
+    "prompt_template_id": "pgx-agent-public-mvp",
+    "prompt_version": "0.1",
+    "retrieval_pipeline_version": "0.1",
+    "output_artifact_uri": null
+  },
+  "patient_context_summary": {
+    "conditions": [
+      {
+        "condition_id": 204,
+        "condition_name": "Major Depressive Disorder",
+        "icd10_code": "F33.1",
+        "status": "ACTIVE"
+      },
+      {
+        "condition_id": 509,
+        "condition_name": "Neuropathic Pain",
+        "icd10_code": "G56.00",
+        "status": "ACTIVE"
+      }
+    ],
+    "active_medications": [
+      {
+        "drug_id": 42,
+        "generic_name": "Fluoxetine",
+        "rxnorm_id": "4493",
+        "dosage": "20 mg",
+        "dosage_frequency_period": "Once Daily"
+      }
+    ],
+    "genomic_profile": [
+      {
+        "gene_symbol": "CYP2D6",
+        "variant_identifier": "*1",
+        "diplotype": "*1/*1",
+        "inferred_phenotype": "Normal Metabolizer"
+      },
+      {
+        "gene_symbol": "CYP2C19",
+        "variant_identifier": "*2",
+        "diplotype": "*2/*2",
+        "inferred_phenotype": "Poor Metabolizer"
+      },
+      {
+        "gene_symbol": "SLCO1B1",
+        "variant_identifier": "*5",
+        "diplotype": "*5/*5",
+        "inferred_phenotype": "Intermediate Metabolizer"
+      }
+    ]
+  },
+  "pgx_and_safety_summary": {
+    "overall_assessment": "REQUIRES_QUALIFIED_REVIEW",
+    "findings": [
+      {
+        "finding_id": "PGX-FINDING-001",
+        "gene_symbol": "CYP2C19",
+        "finding_type": "PHARMACOGENOMIC_CONSIDERATION",
+        "severity": "HIGH",
+        "summary": "Synthetic example: Patient has a CYP2D6 *1/*1 diplotype with an inferred Normal Metabolizer phenotype, but co-prescribed fluoxetine is a strong CYP2D6 inhibitor that can induce phenoconversion, resulting in functionally reduced CYP2D6 activity consistent with a Poor Metabolizer phenotype.",
+        "evidence_status": "PLACEHOLDER_PENDING_RUNTIME_VALIDATION"
+      },
+      {
+        "finding_id": "PGX-FINDING-002",
+        "gene_symbol": "CYP2D6",
+        "finding_type": "MEDICATION_SAFETY_CONSIDERATION",
+        "severity": "MODERATE",
+        "summary": "Synthetic example: active medication context should be evaluated for potential effects on CYP2D6-related drug response before downstream recommendations are accepted.",
+        "evidence_status": "PLACEHOLDER_PENDING_RUNTIME_VALIDATION"
+      },
+      {
+        "finding_id": "PGX-FINDING-003",
+        "gene_symbol": "SLCO1B1",
+        "finding_type": "ADVERSE_RESPONSE_RISK_CONSIDERATION",
+        "severity": "MODERATE",
+        "summary": "Synthetic example: SLCO1B1 phenotype should be evaluated when candidate therapies include relevant transporter-dependent drugs.",
+        "evidence_status": "PLACEHOLDER_PENDING_RUNTIME_VALIDATION"
+      }
+    ],
+    "uncertainty_flags": [
+      "No live CPIC/DPWG or ClinPGx evidence retrieval was performed for this sample artifact.",
+      "No live ClinicalTrials.gov eligibility verification was performed.",
+      "No clinician validation has occurred."
+    ]
+  },
+  "ranked_candidate_trials": [
+    {
+      "recommendation_evaluation_id": 5001,
+      "trial_id": "SYN-TRIAL-001",
+      "title": "Synthetic Precision-Therapy Trial A",
+      "rank_order": 1,
+      "efficacy_score": 0.86,
+      "safety_risk_score": 0.21,
+      "aggregate_evidence_level": "MODERATE",
+      "rationale": "Illustrative ranking based on synthetic disease fit, genomic compatibility, medication-safety considerations, and eligibility signals.",
+      "eligibility_assessment": {
+        "overall_status": "POTENTIALLY_ELIGIBLE",
+        "matched_criteria": [
+          "Condition match",
+          "No synthetic exclusion conflict detected",
+          "Genomic profile potentially relevant to study design"
+        ],
+        "unresolved_criteria": [
+          "Verify detailed laboratory and prior-treatment requirements at runtime",
+          "Verify current recruitment status and site availability"
+        ]
+      },
+      "trial_location": {
+        "facility_name": "Synthetic Research Center",
+        "city": "Phoenix",
+        "state_region": "AZ",
+        "country": "United States"
+      },
+      "intervention_summary": "Synthetic intervention placeholder.",
+      "evidence_citations": [
+        {
+          "evidence_role": "TRIAL_MATCH_SUPPORT",
+          "entity_type": "CLINICAL_TRIAL",
+          "source_system": "ClinicalTrials.gov",
+          "source_record_id": "SYN-TRIAL-001",
+          "source_url": "TBD_AT_RUNTIME",
+          "source_version": "TBD_AT_RUNTIME",
+          "citation": "Illustrative placeholder \u2014 replace with runtime ClinicalTrials.gov citation."
+        },
+        {
+          "evidence_role": "PGX_SUPPORT",
+          "entity_type": "PGX_GUIDELINE_OR_ANNOTATION",
+          "source_system": "CPIC/DPWG/ClinPGx",
+          "source_record_id": "TBD_AT_RUNTIME",
+          "source_url": "TBD_AT_RUNTIME",
+          "source_version": "TBD_AT_RUNTIME",
+          "citation": "Illustrative placeholder \u2014 replace with runtime PGx evidence citation."
+        }
+      ]
+    },
+    {
+      "recommendation_evaluation_id": 5002,
+      "trial_id": "SYN-TRIAL-002",
+      "title": "Synthetic Pharmacogenomic Trial B",
+      "rank_order": 2,
+      "efficacy_score": 0.78,
+      "safety_risk_score": 0.29,
+      "aggregate_evidence_level": "MODERATE",
+      "rationale": "Illustrative ranking with good disease alignment but greater uncertainty in genomic relevance and safety evidence.",
+      "eligibility_assessment": {
+        "overall_status": "REQUIRES_REVIEW",
+        "matched_criteria": [
+          "Condition match"
+        ],
+        "unresolved_criteria": [
+          "Confirm genomic inclusion criterion",
+          "Confirm medication exclusions",
+          "Confirm recruiting location"
+        ]
+      },
+      "trial_location": {
+        "facility_name": null,
+        "city": "Scottsdale",
+        "state_region": "AZ",
+        "country": "United States"
+      },
+      "intervention_summary": "Synthetic intervention placeholder.",
+      "evidence_citations": [
+        {
+          "evidence_role": "TRIAL_MATCH_SUPPORT",
+          "entity_type": "CLINICAL_TRIAL",
+          "source_system": "ClinicalTrials.gov",
+          "source_record_id": "SYN-TRIAL-002",
+          "source_url": "TBD_AT_RUNTIME",
+          "source_version": "TBD_AT_RUNTIME",
+          "citation": "Illustrative placeholder \u2014 replace with runtime ClinicalTrials.gov citation."
+        }
+      ]
+    },
+    {
+      "recommendation_evaluation_id": 5003,
+      "trial_id": "SYN-TRIAL-003",
+      "title": "Synthetic Genotype-Stratified Trial C",
+      "rank_order": 3,
+      "efficacy_score": 0.69,
+      "safety_risk_score": 0.37,
+      "aggregate_evidence_level": "LOW_TO_MODERATE",
+      "rationale": "Illustrative lower-ranked candidate due to unresolved eligibility and higher medication-safety uncertainty.",
+      "eligibility_assessment": {
+        "overall_status": "UNCERTAIN",
+        "matched_criteria": [
+          "Condition match"
+        ],
+        "unresolved_criteria": [
+          "Confirm genotype eligibility",
+          "Resolve medication-related exclusion criteria",
+          "Confirm site availability"
+        ]
+      },
+      "trial_location": {
+        "facility_name": "Synthetic Academic Medical Center",
+        "city": "Tempe",
+        "state_region": "AZ",
+        "country": "United States"
+      },
+      "intervention_summary": "Synthetic intervention placeholder.",
+      "evidence_citations": [
+        {
+          "evidence_role": "TRIAL_MATCH_SUPPORT",
+          "entity_type": "CLINICAL_TRIAL",
+          "source_system": "ClinicalTrials.gov",
+          "source_record_id": "SYN-TRIAL-003",
+          "source_url": "TBD_AT_RUNTIME",
+          "source_version": "TBD_AT_RUNTIME",
+          "citation": "Illustrative placeholder \u2014 replace with runtime ClinicalTrials.gov citation."
+        }
+      ]
+    }
+  ],
+  "qualified_human_review": {
+    "required": true,
+    "review_status": "PENDING",
+    "reviewer_principal": null,
+    "review_timestamp": null,
+    "feedback": null,
+    "review_rationale": null,
+    "release_status": "BLOCKED_PENDING_REVIEW"
+  },
+  "validation_summary": {
+    "schema_constrained_output": true,
+    "citation_completeness": "PLACEHOLDER_ONLY",
+    "contradictions_detected": 0,
+    "unsupported_claims_detected": 0,
+    "runtime_evidence_validation_complete": false,
+    "ready_for_downstream_clinical_use": false
+  }
+}
