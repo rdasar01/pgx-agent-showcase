@@ -188,7 +188,7 @@ The repository does not include:
 pgx-agent-showcase/
 ├── README.md
 ├── NOTICE.md
-├── architecture.png
+├── PGx-Agent_architecture.png
 ├── synthetic-patient.json
 └── sample-output.json
 ```
