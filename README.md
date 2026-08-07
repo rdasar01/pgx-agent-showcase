@@ -25,7 +25,7 @@ Conventional keyword matching is often inadequate because star alleles—such as
 * The patient’s diplotype
 * Predicted metabolizer phenotype
 * Current and proposed medications
-* Drug–gene and drug–drug interactions
+* Drug–gene interactions & medication-safety considerations
 * Disease context
 * Clinical-trial eligibility criteria
 * Available evidence quality
