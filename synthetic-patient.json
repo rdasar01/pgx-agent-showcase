@@ -1,0 +1,98 @@
+{
+  "medical_condition": [
+    {
+      "condition_id": 204,
+      "condition_name": "Major Depressive Disorder",
+      "icd10_code": "F33.1"
+    },
+    {
+      "condition_id": 509,
+      "condition_name": "Neuropathic Pain",
+      "icd10_code": "G56.00"
+    }
+  ],
+  "patient": [
+    {
+      "patient_id": 98421,
+      "first_name": "Jane",
+      "last_name": "Doe"
+    }
+  ],
+  "patient_condition": [
+    {
+      "patient_condition_id": 101,
+      "patient_id": 98421,
+      "condition_id": 204,
+      "start_date": "2023-01-15",
+      "end_date": null
+    },
+    {
+      "patient_condition_id": 102,
+      "patient_id": 98421,
+      "condition_id": 509,
+      "start_date": "2024-06-10",
+      "end_date": null
+    }
+  ],
+  "drug": [
+    {
+      "drug_id": 42,
+      "rxnorm_id": "4493",
+      "generic_name": "Fluoxetine",
+      "brand_name": "Prozac",
+      "drug_description": "Selective serotonin reuptake inhibitor (SSRI)."
+    }
+  ],
+  "patient_medication": [
+    {
+      "patient_medication_id": 301,
+      "patient_id": 98421,
+      "patient_condition_id": 101,
+      "drug_id": 42,
+      "dosage": "20 mg",
+      "dosage_frequency_period": "Once Daily",
+      "start_date": "2023-02-01",
+      "end_date": null
+    }
+  ],
+  "genomic_variant": [
+    {
+      "genomic_id": 201,
+      "gene_symbol": "CYP2D6",
+      "variant_identifier": "*1"
+    },
+    {
+      "genomic_id": 202,
+      "gene_symbol": "CYP2C19",
+      "variant_identifier": "*2"
+    },
+    {
+      "genomic_id": 203,
+      "gene_symbol": "SLCO1B1",
+      "variant_identifier": "*5"
+    }
+  ],
+  "patient_genomic_variant": [
+    {
+      "patient_genomic_variant_id": 801,
+      "patient_id": 98421,
+      "genomic_id": 201,
+      "diplotype": "*1/*1",
+      "inferred_phenotype": "Normal Metabolizer"
+    },
+    {
+      "patient_genomic_variant_id": 802,
+      "patient_id": 98421,
+      "genomic_id": 202,
+      "diplotype": "*2/*2",
+      "inferred_phenotype": "Poor Metabolizer"
+    },
+    {
+      "patient_genomic_variant_id": 803,
+      "patient_id": 98421,
+      "genomic_id": 203,
+      "diplotype": "*5/*5",
+      "inferred_phenotype": "Intermediate Metabolizer"
+    }
+  ]
+}
