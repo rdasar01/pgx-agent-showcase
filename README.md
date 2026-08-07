@@ -79,7 +79,7 @@ Use of each source remains subject to its applicable terms, attribution requirem
 
 The retrieval pipeline is designed to combine:
 
-* **Structured filtering** for recruitment status, study phase, eligibility criteria, interventions, and locations
+* **Structured filtering** for trial recruitment status, study phase, eligibility criteria, interventions, and locations
 * **Sparse retrieval** for exact biomedical terminology and star-allele identifiers
 * **Dense bi-encoder retrieval** for semantic candidate generation
 * **Cross-encoder re-ranking** for detailed comparison of patient context, genomic evidence, and trial criteria
