@@ -268,8 +268,5 @@ The complete proprietary implementation is not included in this public repositor
 
 ## Contact
 
-For employment-related discussions, technical interviews, demonstrations, or authorized access inquiries:
-
 * **Name:** Raji Dasari
 * **LinkedIn:** https://www.linkedin.com/in/rajidasari/
-* **Email:** RajiDasari@hotmail.com
