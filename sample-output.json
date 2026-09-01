@@ -82,7 +82,7 @@
         "gene_symbol": "CYP2D6",
         "finding_type": "MEDICATION_SAFETY_CONSIDERATION",
         "severity": "MODERATE",
-        "summary": "Synthetic example: active medication context should be evaluated for potential effects on CYP2D6-related drug response before downstream recommendations are accepted.",
+        "summary": "Synthetic example: Patient exhibits CYP2D6 Normal Metabolizer genotype (*1/*1), but co-prescribed Fluoxetine acts as a strong inhibitor, inducing phenoconversion to a Poor Metabolizer functional status.",
         "evidence_status": "PLACEHOLDER_PENDING_RUNTIME_VALIDATION"
       },
       {
